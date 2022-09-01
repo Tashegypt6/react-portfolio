@@ -25,6 +25,7 @@
   --container-width-md: 90%;
 
   --transition: all 500ms ease;
+  --transition-f: all 100ms ease;
 }
 /* google font montserrat */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Nunito:wght@200;300;400;600;700&display=swap');

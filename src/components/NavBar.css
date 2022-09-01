@@ -20,6 +20,7 @@ nav{
     justify-content: space-between;
     align-items: center;
     position: relative;
+    transition: --transition;
 }
 
 .logo{
@@ -35,9 +36,78 @@ nav{
 .nav__links a{
     padding: .1rem;
     margin: .1rem;
+    transition: var(--transition-f);
 }
 .nav__links a:hover{
     color: var(--color-secondary);
-    border-bottom: .5rem groove red;
+    /* border-top: .5rem groove rgb(255, 51, 0);
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%; */
 }
 
+
+.active-nav{
+    position: relative;
+    color: var(--color-secondary);
+    border-bottom: .5rem groove rgb(94, 255, 0);
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+}
+.active-nav::after{
+    content: '';
+    display: block;
+    height: 1.2rem;
+    width: 1.2rem;
+    background: var(--color-primary);
+    position: absolute;
+    left: calc(50% - 0.6rem);
+    transform: rotate(45deg);
+    margin-top: 0.9rem;
+}
+
+
+
+
+/* media queries (medium and small) screens) */
+@media screen and (max-width: 980px){
+    .nav__toggle-btn{
+       display: inline-block;
+       background: transparent;
+       font-size: 1.8rem;
+       cursor: pointer;
+    }
+    .nav__toggle-btn svg{
+        color: var(--color-gray-100);
+    }
+    .nav__links{
+        position: absolute;
+        top: 100%;
+        right: 0;
+        flex-direction: column;
+        gap: 0;
+    }
+    .active-nav , .active-nav::after{
+        display: none;
+    }
+    
+    .nav__links li{
+        height: 4rem;
+        width: 100%;
+        box-shadow: -1rem 2rem 4rem
+        rgba(0, 0, 0, 0.9);
+    }
+    .nav__links li a{
+        background: var(--color-primary);
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 1rem 5rem 1rem 3rem;
+    }
+    .show__nav{
+        display: flex;
+    }
+    .hide__nav{
+        display: none;
+    }
+}
