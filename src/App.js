@@ -16,13 +16,16 @@ function App() {
   return (
     <BrowserRouter className="App">
       <NavBar/>
-      <Home/>
-      <Gallery/>
-      <Plans/>
-      <Trainers/>
-      <About/>
-      <Contact/>
-      <NotFound/>
+      <Routes>
+        <Route index element={<Home/>}/>
+        <Route path='gallery' element={<Gallery/>}/>
+        <Route path='plans' element={<Plans/>}/>
+        <Route path='trainers' element={<Trainers/>}/>
+        <Route path='about' element={<About/>}/>
+        <Route path='contact' element={<Contact/>}/>
+        <Route path='*' element={<NotFound/>}/>
+      </Routes>
+      
     </BrowserRouter>
   );
 };

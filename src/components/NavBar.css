@@ -6,7 +6,7 @@ nav{
     place-items: center;
     position: fixed;
     top: 0;left: 0;
-    /* z-index: 99; */
+    z-index: 99;
 }
 
 /* only show on medium and small screen */
@@ -29,7 +29,7 @@ nav{
 
 .nav__links{
     display: flex;
-    gap: 3.5rem;
+    gap: 1.5rem;
     align-items: center;
 }
 
@@ -69,7 +69,7 @@ nav{
 
 
 /* media queries (medium and small) screens) */
-@media screen and (max-width: 980px){
+@media screen and (max-width: 780px){
     .nav__toggle-btn{
        display: inline-block;
        background: transparent;
@@ -85,6 +85,7 @@ nav{
         right: 0;
         flex-direction: column;
         gap: 0;
+        perspective: 400px;
     }
     .active-nav , .active-nav::after{
         display: none;
@@ -95,6 +96,31 @@ nav{
         width: 100%;
         box-shadow: -1rem 2rem 4rem
         rgba(0, 0, 0, 0.9);
+        animation: navAnimation 600ms ease forwards;
+        opacity: 0;
+        transform-origin: top;
+    }
+    .nav__links li:nth-child(2){
+        animation-delay: 200ms;
+    }
+    .nav__links li:nth-child(3){
+        animation-delay: 400ms;
+    }
+    .nav__links li:nth-child(4){
+        animation-delay: 600ms;
+    }
+    .nav__links li:nth-child(5){
+        animation-delay: 800ms;
+    }
+    .nav__links li:nth-child(6){
+        animation-delay: 1000ms;
+    }
+
+    @keyframes navAnimation{
+        to{
+            transform: rotateX(0);
+            opacity: 1;
+        }
     }
     .nav__links li a{
         background: var(--color-primary);
