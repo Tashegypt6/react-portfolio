@@ -1,4 +1,5 @@
 import {GiLaurelCrown} from 'react-icons/gi'
+import {SiBarclays} from 'react-icons/si'
 
 
 
@@ -76,25 +77,25 @@ export const programs = [
 export const values = [
     {
         id: 1,
-        icon: <GiLaurelCrown/>,
+        icon: <SiBarclays/>,
         title: "Value One",
         desc: "Placeat quidem facere dicta modi? Pariatur exercitationem illum."
     },
     {
         id: 2,
-        icon: <GiLaurelCrown/>,
+        icon: <SiBarclays/>,
         title: "Value Two",
         desc: "Placeat quidem facere dicta modi? Pariatur exercitationem illum."
     },
     {
         id: 3,
-        icon: <GiLaurelCrown/>,
+        icon: <SiBarclays/>,
         title: "Value Three",
         desc: "Placeat quidem facere dicta modi? Pariatur exercitationem illum."
     },
     {
         id: 4,
-        icon: <GiLaurelCrown/>,
+        icon: <SiBarclays/>,
         title: "Value Four",
         desc: "Placeat quidem facere dicta modi? Pariatur exercitationem illum."
     }
