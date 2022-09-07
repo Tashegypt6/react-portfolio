@@ -33,14 +33,13 @@
 body{
   font-family: Montserrat,sans-serif;
   color: var(--color-gray-200);
-  /* line-height: 1.7; */
-  /* overflow: hidden; */
+  line-height: 1.7;
   background: var(--color-gray-600);
 }
 .container{
   width: var(--container-width-lg);
   max-width: 1920px;
-  margin: auto;
+  margin: 0 auto;
 }
 
 h1,h2,h3,h4,h5{

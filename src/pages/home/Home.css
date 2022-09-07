@@ -79,9 +79,13 @@
 .values__image{
     filter: saturate(0.25) brightness(0.25);
     transition: var(--transition);
+    border: 3px groove var(--color-secondary);
+    border-radius: 10%;
+    overflow: hidden;
 }
 .values__image:hover{
     filter: saturate(1) brightness(1);
+    border-radius: 5%;
 }
 .values__right p{
     margin: 1.5rem 0 5rem;
@@ -104,6 +108,18 @@
 }
 
 /*===============FAQs=============*/
+.faqs .section__head{
+    background: linear-gradient(transparent,rgba(250,0,0,0.5));
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    width: 10rem;
+    transition: var(--transition);
+}
+
+.faqs:hover .section__head{
+    width: 100%;
+}
+
 .faqs__wrapper{
     margin-top: 4rem;
     display: grid;
@@ -126,4 +142,61 @@
     background: transparent;
     color: var(--color-gray-100);
     font-size: 1.5rem;
+}
+.faq p{
+    margin-top: 1.5rem;
+}
+
+
+/*===============Testimonials=============*/
+
+.testimonials{
+    width: 50rem;
+    margin-inline: auto;
+}
+
+.testimonials__head{
+    justify-content: center;
+}
+
+.card.testimonial{
+    position: relative;
+    text-align: left;
+    margin-top: 5rem;
+}
+
+.testimonial__avatar{
+    width: 4rem;
+    height: 4rem;
+    border: 2px groove transparent;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    position: absolute;
+    top: -2rem;
+    left: calc(50% - 2rem);
+    box-shadow: 0 1.5rem 2rem rgba(26, 26, 54, 0.4);
+    transition: var(--transition);
+}
+
+.testimonials:hover .testimonial__avatar{
+    border-radius: 50%;
+    border-color: var(--color-gray-400);
+}
+
+.testimonial__quote{
+    font-style: italic;
+    margin: 1rem 0 2rem 0;
+}
+
+.card small.testimonial__title{
+    margin-top: 0.3rem;
+}
+
+.testimonials__btn-container{
+    width: fit-content;
+    margin: 2.5rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
 }
