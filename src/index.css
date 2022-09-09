@@ -83,6 +83,9 @@ img{
   border-radius: 2rem;
   font-size: 1.1rem;
 }
+.btn.lg:hover{
+  padding: 1.2rem 5rem 1.2rem 3rem;
+}
 
 .btn.sm{
   padding: 0.4rem 1.2rem;
@@ -90,7 +93,8 @@ img{
 }
 
 .btn.sm:hover{
-  background: var(--color-gray-100);
+  background: var(--color-secondary);
+  color: var(--color-gray-600);
 }
 
 section{
@@ -110,14 +114,6 @@ section{
   color: var(--color-secondary);
   font-size: 2rem;
 }
-
-
-
-
-
-
-
-
 
 
 
@@ -160,4 +156,59 @@ section{
   margin-top: 1rem;
   display: block;
   font-weight: 300;
+}
+
+.header{
+  margin-top: 5rem;
+  height: 20rem;
+  overflow: hidden;
+  border-bottom: 2px groove var(--color-gray-400);
+}
+.header__container{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: grid;
+  place-items: center;
+  background: black;
+}
+
+.header__container-bg{
+  position: absolute;
+  width: 100%;
+}
+.header__container-bg img{
+  height: 50rem;
+  opacity: 0.5;
+}
+.header__content{
+  position: relative;
+  width: 44%;
+  margin: 0 auto;
+  text-align: center;
+  color: var(--color-gray-100);
+}
+
+
+/* MEDIA QUERIES (MEDIUM SCREEN)*/
+
+@media screen and (max-width:1024px){
+  .container{
+    width: var(--container-width-md);
+  }
+  h1{
+    font-size: 2rem;
+  }
+  h2{
+    font-size: 1.6rem;
+  }
+}
+
+/* MEDIA QUERIES (SMALL SCREEN)*/
+
+@media screen and (max-width:600px){
+  h1{
+    font-size: 2.2rem;
+    line-height: 1.3;
+  }
 }
