@@ -8,6 +8,7 @@ import NotFound from './pages/notFound/NotFound';
 import Plans from './pages/plans/Plans';
 import Trainers from './pages/trainers/Trainers';
 import NavBar from './components/NavBar';
+import Footer from './components/Footer';
 
 
 import './App.css';
@@ -25,6 +26,7 @@ function App() {
         <Route path='contact' element={<Contact/>}/>
         <Route path='*' element={<NotFound/>}/>
       </Routes>
+      <Footer/>
       
     </BrowserRouter>
   );

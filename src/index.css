@@ -27,6 +27,7 @@
   --transition: all 500ms ease;
   --transition-f: all 100ms ease;
 }
+
 /* google font montserrat */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Nunito:wght@200;300;400;600;700&display=swap');
 
@@ -63,6 +64,7 @@ img{
   display: block;
   object-fit: cover;
   width: 100%;
+  height: fit-content;
 }
 
 .btn{
@@ -159,6 +161,7 @@ section{
 }
 
 .header{
+  width: 100%;
   margin-top: 5rem;
   height: 20rem;
   overflow: hidden;
@@ -178,7 +181,7 @@ section{
   width: 100%;
 }
 .header__container-bg img{
-  height: 50rem;
+  /* height: 50rem; */
   opacity: 0.5;
 }
 .header__content{
@@ -187,6 +190,12 @@ section{
   margin: 0 auto;
   text-align: center;
   color: var(--color-gray-100);
+}
+.header__content h2{
+  margin-top: 1rem;
+}
+.header__content p{
+  color: var(--color-gray-200);
 }
 
 
@@ -202,6 +211,9 @@ section{
   h2{
     font-size: 1.6rem;
   }
+  .header__content{
+    width: 100%;
+  }
 }
 
 /* MEDIA QUERIES (SMALL SCREEN)*/
@@ -210,5 +222,17 @@ section{
   h1{
     font-size: 2.2rem;
     line-height: 1.3;
+  }
+  section{
+    margin-top: 7rem;
+  }
+  .header{
+    width: 100%;
+  }
+  .header__content{
+    padding: 3rem 0;
+  }
+  .header__content p{
+    font-size: 0.85rem;
   }
 }
