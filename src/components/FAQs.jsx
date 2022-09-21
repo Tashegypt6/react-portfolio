@@ -2,7 +2,6 @@ import SectionHead from './SectionHead';
 import {BsQuestionOctagonFill} from 'react-icons/bs';
 import { faqs } from '../data';
 import FAQ from './FAQ';
-import Card from '../UI/Card';
 
 const FAQs = () => {
   return (

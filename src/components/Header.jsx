@@ -1,4 +1,4 @@
-
+ 
 
 const Header = ({title,image,children}) => {
   return (

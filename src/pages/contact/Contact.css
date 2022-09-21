@@ -18,6 +18,8 @@
     border-radius: 1.5rem;
 }
 .contact__wrapper a:hover{
+    transform: scale(1.8);
+    color: var(--color-secondary);
     background: transparent;
     border-color: var(--color-gray-100);
 }
